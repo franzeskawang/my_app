@@ -1,0 +1,17 @@
+// Type-check only the OpenAPI-generated declarations and typed API transport/client.
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "strict": true,
+    "skipLibCheck": true,
+    "noEmit": true,
+    "types": ["vite/client"]
+  },
+  "include": [
+    "src/features/expenses/expenseApi.ts",
+    "src/platform/web/httpTransport.ts",
+    "src/shared/api/generated.ts"
+  ]
+}

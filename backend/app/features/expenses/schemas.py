@@ -1,3 +1,4 @@
+"""Request, response, and domain schemas for bookkeeping."""
 from datetime import date
 from enum import Enum
 from pydantic import BaseModel, Field, field_validator
@@ -25,6 +26,18 @@ class Submission(BaseModel):
         if not value:
             raise ValueError("請填寫一則留言")
         return value
+
+
+class ExpenseSubmissionResponse(BaseModel):
+    saved: int
+    ids: list[int]
+    advice: str
+    ai_available: bool
+    ai_error: str | None = None
+
+
+class DeleteExpenseResponse(BaseModel):
+    deleted: int
 
 
 class ClassifiedExpense(BaseModel):

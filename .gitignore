@@ -1,3 +1,4 @@
+# Local secrets, runtime data, and generated dependency/build artifacts.
 node_modules/
 **/node_modules/
 dist/

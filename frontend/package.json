@@ -3,7 +3,25 @@
   "private": true,
   "version": "1.0.0",
   "type": "module",
-  "scripts": {"dev": "vite", "build": "vite build", "preview": "vite preview"},
-  "dependencies": {"@vitejs/plugin-react": "latest", "vite": "latest", "react": "latest", "react-dom": "latest", "lucide-react": "^0.468.0"},
-  "devDependencies": {"tailwindcss": "^3.4.17", "postcss": "^8.4.49", "autoprefixer": "^10.4.20"}
+  "scripts": {
+    "dev": "vite",
+    "build": "npm run typecheck:api && vite build",
+    "preview": "vite preview",
+    "api:types": "openapi-typescript ../backend/openapi.json -o src/shared/api/generated.ts",
+    "typecheck:api": "tsc --noEmit --project tsconfig.api.json"
+  },
+  "dependencies": {
+    "@vitejs/plugin-react": "latest",
+    "lucide-react": "^0.468.0",
+    "react": "latest",
+    "react-dom": "latest",
+    "vite": "latest"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.20",
+    "openapi-typescript": "^7.13.0",
+    "postcss": "^8.4.49",
+    "tailwindcss": "^3.4.17",
+    "typescript": "^5.9.3"
+  }
 }

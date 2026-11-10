@@ -1,3 +1,4 @@
+/* Shared Tailwind directives and base styles for the bookkeeping interface. */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

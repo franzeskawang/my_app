@@ -1,1 +1,1 @@
-"""Expense tracker API package."""
+"""Backend package organized into API, application, infrastructure, and integrations."""
